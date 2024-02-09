@@ -9,5 +9,6 @@ public interface DatoServiceI {
 	List<Dato> getAllDato();
 	Dato updateDato(Dato dato);
 	boolean deleteDatoId(int idDato);
-	
+	Dato searchDato(int id);
+	Dato searchDato(String email);
 }

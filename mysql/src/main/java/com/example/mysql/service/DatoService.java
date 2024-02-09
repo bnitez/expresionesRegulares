@@ -35,8 +35,21 @@ public class DatoService implements DatoServiceI {
 
 	@Override
 	public boolean deleteDatoId(int idDato) {
-		// TODO Auto-generated method stub
+		if(dao.searchDato(idDato) != null ) {
+			dao.deleteIdDato(idDato);
+			return true;
+		}
 		return false;
+	}
+
+	@Override
+	public Dato searchDato(int id) {
+		return dao.searchDato(id);
+	}
+
+	@Override
+	public Dato searchDato(String email) {
+		return dao.searchDato(email);
 	}
 
 }
